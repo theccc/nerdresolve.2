@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :nerds
+
   resources :servicos
 
   resources :blogs

@@ -1,0 +1,40 @@
+<%= simple_form_for(@nerd) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :nome %>
+    <%= f.input :sobrenome %>
+    <%= f.input :rg %>
+    <%= f.input :cpf %>
+    <%= f.input :nascimento %>
+    <%= f.input :endereco %>
+    <%= f.input :numero %>
+    <%= f.input :bairro %>
+    <%= f.input :cidade %>
+    <%= f.input :estado %>
+    <%= f.input :cep %>
+    <%= f.input :distancia %>
+    <%= f.input :especialidade1 %>
+    <%= f.input :especialidade2 %>
+    <%= f.input :especialidade3 %>
+    <%= f.input :especialidade4 %>
+    <%= f.input :especialidade5 %>
+    <%= f.input :descricao %>
+    <%= f.input :taxa %>
+    <%= f.input :problema1 %>
+    <%= f.input :problema2 %>
+    <%= f.input :problema3 %>
+    <%= f.input :problema4 %>
+    <%= f.input :problema5 %>
+    <%= f.input :problema6 %>
+    <%= f.input :problema7 %>
+    <%= f.input :problema8 %>
+    <%= f.input :problema9 %>
+    <%= f.input :problema10 %>
+    <%= f.input :status %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

@@ -1,0 +1,83 @@
+<h1>Listing nerds</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th>Sobrenome</th>
+      <th>Rg</th>
+      <th>Cpf</th>
+      <th>Nascimento</th>
+      <th>Endereco</th>
+      <th>Numero</th>
+      <th>Bairro</th>
+      <th>Cidade</th>
+      <th>Estado</th>
+      <th>Cep</th>
+      <th>Distancia</th>
+      <th>Especialidade1</th>
+      <th>Especialidade2</th>
+      <th>Especialidade3</th>
+      <th>Especialidade4</th>
+      <th>Especialidade5</th>
+      <th>Descricao</th>
+      <th>Taxa</th>
+      <th>Problema1</th>
+      <th>Problema2</th>
+      <th>Problema3</th>
+      <th>Problema4</th>
+      <th>Problema5</th>
+      <th>Problema6</th>
+      <th>Problema7</th>
+      <th>Problema8</th>
+      <th>Problema9</th>
+      <th>Problema10</th>
+      <th>Status</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @nerds.each do |nerd| %>
+      <tr>
+        <td><%= nerd.nome %></td>
+        <td><%= nerd.sobrenome %></td>
+        <td><%= nerd.rg %></td>
+        <td><%= nerd.cpf %></td>
+        <td><%= nerd.nascimento %></td>
+        <td><%= nerd.endereco %></td>
+        <td><%= nerd.numero %></td>
+        <td><%= nerd.bairro %></td>
+        <td><%= nerd.cidade %></td>
+        <td><%= nerd.estado %></td>
+        <td><%= nerd.cep %></td>
+        <td><%= nerd.distancia %></td>
+        <td><%= nerd.especialidade1 %></td>
+        <td><%= nerd.especialidade2 %></td>
+        <td><%= nerd.especialidade3 %></td>
+        <td><%= nerd.especialidade4 %></td>
+        <td><%= nerd.especialidade5 %></td>
+        <td><%= nerd.descricao %></td>
+        <td><%= nerd.taxa %></td>
+        <td><%= nerd.problema1 %></td>
+        <td><%= nerd.problema2 %></td>
+        <td><%= nerd.problema3 %></td>
+        <td><%= nerd.problema4 %></td>
+        <td><%= nerd.problema5 %></td>
+        <td><%= nerd.problema6 %></td>
+        <td><%= nerd.problema7 %></td>
+        <td><%= nerd.problema8 %></td>
+        <td><%= nerd.problema9 %></td>
+        <td><%= nerd.problema10 %></td>
+        <td><%= nerd.status %></td>
+        <td><%= link_to 'Show', nerd %></td>
+        <td><%= link_to 'Edit', edit_nerd_path(nerd) %></td>
+        <td><%= link_to 'Destroy', nerd, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Nerd', new_nerd_path %>
