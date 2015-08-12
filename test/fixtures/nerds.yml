@@ -1,0 +1,65 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nome: MyString
+  sobrenome: MyString
+  rg: MyString
+  cpf: MyString
+  nascimento: 2015-08-12
+  endereco: MyString
+  numero: MyString
+  bairro: MyString
+  cidade: MyString
+  estado: MyString
+  cep: MyString
+  distancia: MyString
+  especialidade1: MyString
+  especialidade2: MyString
+  especialidade3: MyString
+  especialidade4: MyString
+  especialidade5: MyString
+  descricao: MyText
+  taxa: MyString
+  problema1: MyString
+  problema2: MyString
+  problema3: MyString
+  problema4: MyString
+  problema5: MyString
+  problema6: MyString
+  problema7: MyString
+  problema8: MyString
+  problema9: MyString
+  problema10: MyString
+  status: MyString
+
+two:
+  nome: MyString
+  sobrenome: MyString
+  rg: MyString
+  cpf: MyString
+  nascimento: 2015-08-12
+  endereco: MyString
+  numero: MyString
+  bairro: MyString
+  cidade: MyString
+  estado: MyString
+  cep: MyString
+  distancia: MyString
+  especialidade1: MyString
+  especialidade2: MyString
+  especialidade3: MyString
+  especialidade4: MyString
+  especialidade5: MyString
+  descricao: MyText
+  taxa: MyString
+  problema1: MyString
+  problema2: MyString
+  problema3: MyString
+  problema4: MyString
+  problema5: MyString
+  problema6: MyString
+  problema7: MyString
+  problema8: MyString
+  problema9: MyString
+  problema10: MyString
+  status: MyString
