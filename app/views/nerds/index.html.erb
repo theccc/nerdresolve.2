@@ -1,45 +1,49 @@
-<h1>Listing nerds</h1>
-
-<table>
+<%- model_class = Nerd -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => Nerd %></h1>
+</div>
+<table class="table table-striped">
   <thead>
     <tr>
-      <th>Nome</th>
-      <th>Sobrenome</th>
-      <th>Rg</th>
-      <th>Cpf</th>
-      <th>Nascimento</th>
-      <th>Endereco</th>
-      <th>Numero</th>
-      <th>Bairro</th>
-      <th>Cidade</th>
-      <th>Estado</th>
-      <th>Cep</th>
-      <th>Distancia</th>
-      <th>Especialidade1</th>
-      <th>Especialidade2</th>
-      <th>Especialidade3</th>
-      <th>Especialidade4</th>
-      <th>Especialidade5</th>
-      <th>Descricao</th>
-      <th>Taxa</th>
-      <th>Problema1</th>
-      <th>Problema2</th>
-      <th>Problema3</th>
-      <th>Problema4</th>
-      <th>Problema5</th>
-      <th>Problema6</th>
-      <th>Problema7</th>
-      <th>Problema8</th>
-      <th>Problema9</th>
-      <th>Problema10</th>
-      <th>Status</th>
-      <th colspan="3"></th>
+      <th>ID</th>
+      <th><%= model_class.human_attribute_name(:nome) %></th>
+      <th><%= model_class.human_attribute_name(:sobrenome) %></th>
+      <th><%= model_class.human_attribute_name(:rg) %></th>
+      <th><%= model_class.human_attribute_name(:cpf) %></th>
+      <th><%= model_class.human_attribute_name(:nascimento) %></th>
+      <th><%= model_class.human_attribute_name(:endereco) %></th>
+      <th><%= model_class.human_attribute_name(:numero) %></th>
+      <th><%= model_class.human_attribute_name(:bairro) %></th>
+      <th><%= model_class.human_attribute_name(:cidade) %></th>
+      <th><%= model_class.human_attribute_name(:estado) %></th>
+      <th><%= model_class.human_attribute_name(:cep) %></th>
+      <th><%= model_class.human_attribute_name(:distancia) %></th>
+      <th><%= model_class.human_attribute_name(:especialidade1) %></th>
+      <th><%= model_class.human_attribute_name(:especialidade2) %></th>
+      <th><%= model_class.human_attribute_name(:especialidade3) %></th>
+      <th><%= model_class.human_attribute_name(:especialidade4) %></th>
+      <th><%= model_class.human_attribute_name(:especialidade5) %></th>
+      <th><%= model_class.human_attribute_name(:descricao) %></th>
+      <th><%= model_class.human_attribute_name(:taxa) %></th>
+      <th><%= model_class.human_attribute_name(:problema1) %></th>
+      <th><%= model_class.human_attribute_name(:problema2) %></th>
+      <th><%= model_class.human_attribute_name(:problema3) %></th>
+      <th><%= model_class.human_attribute_name(:problema4) %></th>
+      <th><%= model_class.human_attribute_name(:problema5) %></th>
+      <th><%= model_class.human_attribute_name(:problema6) %></th>
+      <th><%= model_class.human_attribute_name(:problema7) %></th>
+      <th><%= model_class.human_attribute_name(:problema8) %></th>
+      <th><%= model_class.human_attribute_name(:problema9) %></th>
+      <th><%= model_class.human_attribute_name(:problema10) %></th>
+      <th><%= model_class.human_attribute_name(:status) %></th>
+      <th><%= model_class.human_attribute_name(:created_at) %></th>
+      <th><%=t '.actions', :default => t("helpers.actions") %></th>
     </tr>
   </thead>
-
   <tbody>
     <% @nerds.each do |nerd| %>
       <tr>
+        <td><%= nerd.id %></td>
         <td><%= nerd.nome %></td>
         <td><%= nerd.sobrenome %></td>
         <td><%= nerd.rg %></td>
@@ -70,14 +74,21 @@
         <td><%= nerd.problema9 %></td>
         <td><%= nerd.problema10 %></td>
         <td><%= nerd.status %></td>
-        <td><%= link_to 'Show', nerd %></td>
-        <td><%= link_to 'Edit', edit_nerd_path(nerd) %></td>
-        <td><%= link_to 'Destroy', nerd, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%=l nerd.created_at, format: :long %></td>
+        <td>
+          <%= link_to nerd_path(nerd), :class => 'btn btn-xs', :title => "#{ t('.show', :default => t('helpers.links.show')) }" do %>
+            <%= glyph 'info-sign' %>
+            <%= glyph 'pencil' %>
+          <%- end -%>
+          <%= link_to nerd_path(nerd), :method => :delete, :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) }, :class => 'btn btn-xs', :title => "#{ t('.destroy', :default => t('helpers.links.destroy')) }" do %>
+            <%= glyph 'remove' %>
+          <%- end -%>
+        </td>
       </tr>
     <% end %>
   </tbody>
 </table>
 
-<br>
-
-<%= link_to 'New Nerd', new_nerd_path %>
+<%= link_to t('.new', :default => t("helpers.links.new")),
+            new_nerd_path,
+            :class => 'btn btn-primary' %>

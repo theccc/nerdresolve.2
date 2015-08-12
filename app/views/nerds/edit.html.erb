@@ -1,6 +1,5 @@
-<h1>Editing nerd</h1>
-
-<%= render 'form' %>
-
-<%= link_to 'Show', @nerd %> |
-<%= link_to 'Back', nerds_path %>
+<%- model_class = Nerd -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => [:'helpers.titles.edit', 'Edit %{model}'], :model => Nerd %></h1>
+</div>
+<%= render :partial => 'form' %>

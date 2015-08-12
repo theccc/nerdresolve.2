@@ -1,40 +1,190 @@
-<%= simple_form_for(@nerd) do |f| %>
-  <%= f.error_notification %>
-
-  <div class="form-inputs">
-    <%= f.input :nome %>
-    <%= f.input :sobrenome %>
-    <%= f.input :rg %>
-    <%= f.input :cpf %>
-    <%= f.input :nascimento %>
-    <%= f.input :endereco %>
-    <%= f.input :numero %>
-    <%= f.input :bairro %>
-    <%= f.input :cidade %>
-    <%= f.input :estado %>
-    <%= f.input :cep %>
-    <%= f.input :distancia %>
-    <%= f.input :especialidade1 %>
-    <%= f.input :especialidade2 %>
-    <%= f.input :especialidade3 %>
-    <%= f.input :especialidade4 %>
-    <%= f.input :especialidade5 %>
-    <%= f.input :descricao %>
-    <%= f.input :taxa %>
-    <%= f.input :problema1 %>
-    <%= f.input :problema2 %>
-    <%= f.input :problema3 %>
-    <%= f.input :problema4 %>
-    <%= f.input :problema5 %>
-    <%= f.input :problema6 %>
-    <%= f.input :problema7 %>
-    <%= f.input :problema8 %>
-    <%= f.input :problema9 %>
-    <%= f.input :problema10 %>
-    <%= f.input :status %>
+<%= form_for @nerd, :html => { :class => 'form-horizontal form-model' } do |f| %>
+  <div class="form-group">
+    <%= f.label :nome, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :nome, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :sobrenome, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :sobrenome, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :rg, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :rg, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :cpf, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :cpf, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :nascimento, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.date_select :nascimento, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :endereco, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :endereco, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :numero, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :numero, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :bairro, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :bairro, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :cidade, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :cidade, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :estado, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :estado, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :cep, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :cep, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :distancia, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :distancia, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :especialidade1, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :especialidade1, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :especialidade2, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :especialidade2, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :especialidade3, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :especialidade3, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :especialidade4, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :especialidade4, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :especialidade5, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :especialidade5, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :descricao, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_area :descricao, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :taxa, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :taxa, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :problema1, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :problema1, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :problema2, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :problema2, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :problema3, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :problema3, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :problema4, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :problema4, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :problema5, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :problema5, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :problema6, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :problema6, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :problema7, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :problema7, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :problema8, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :problema8, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :problema9, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :problema9, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :problema10, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :problema10, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :status, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :status, :class => 'text-field form-control' %>
+    </div>
   </div>
 
-  <div class="form-actions">
-    <%= f.button :submit %>
+  <div class="form-group">
+    <div class='col-md-offset-2 col-md-10'>
+      <%= f.submit nil, :class => 'btn btn-primary' %>
+      <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                  nerds_path, :class => 'btn btn-default' %>
+    </div>
   </div>
 <% end %>
