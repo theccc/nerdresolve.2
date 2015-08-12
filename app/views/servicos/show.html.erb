@@ -1,19 +1,28 @@
-<p id="notice"><%= notice %></p>
+<%- model_class = Servico -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => Servico %></h1>
+</div>
 
-<p>
-  <strong>Titulo:</strong>
-  <%= @servico.titulo %>
-</p>
+<div class="fieldset">
+  <dl>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:titulo) %></dt>
+      <dd><pre class="prettyprint"><%= @servico.titulo %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:descricao) %></dt>
+      <dd><pre class="prettyprint"><%= @servico.descricao %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:preco) %></dt>
+      <dd><pre class="prettyprint"><%= @servico.preco %></pre></dd>
+  </dl>
+</div>
 
-<p>
-  <strong>Descricao:</strong>
-  <%= @servico.descricao %>
-</p>
+<div class="form-group">
+  <%= link_to t('.back', :default => t("helpers.links.back")),
+              servicos_path, :class => 'btn btn-default'  %>
+  <%= link_to t('.edit', :default => t("helpers.links.edit")),
+              edit_servico_path(@servico), :class => 'btn btn-default' %>
+  <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+              servico_path(@servico),
+              :method => 'delete',
+              :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+              :class => 'btn btn-danger' %>
+</div>
 
-<p>
-  <strong>Preco:</strong>
-  <%= @servico.preco %>
-</p>
-
-<%= link_to 'Edit', edit_servico_path(@servico) %> |
-<%= link_to 'Back', servicos_path %>
