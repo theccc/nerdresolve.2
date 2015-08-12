@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'apps/index'
+
   resources :nerds
 
   resources :servicos
