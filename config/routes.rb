@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :servicos
+
   resources :blogs
 
   resources :produtos
