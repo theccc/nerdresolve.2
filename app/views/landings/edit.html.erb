@@ -1,6 +1,5 @@
-<h1>Editing landing</h1>
-
-<%= render 'form' %>
-
-<%= link_to 'Show', @landing %> |
-<%= link_to 'Back', landings_path %>
+<%- model_class = Landing -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => [:'helpers.titles.edit', 'Edit %{model}'], :model => Landing %></h1>
+</div>
+<%= render :partial => 'form' %>
